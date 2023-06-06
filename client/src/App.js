@@ -9,7 +9,7 @@ import { useState } from "react";
 function App() {
   const [long_url,set_long_url]=useState("")
   const [copied,setCopied]=useState(false)
-  const base_url="http://localhost:3002/"
+  const base_url="https://url-api.onrender.com/"
   const [count,setCount]=useState("0")
   return (
     <BrowserRouter>

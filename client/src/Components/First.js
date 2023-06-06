@@ -14,7 +14,7 @@ function First(props) {
     const submit=(e)=>
     {
         e.preventDefault();
-        axios.post("http://localhost:3002/url",{redirectUrl:user_input}).then((res)=>
+        axios.post("https://url-api.onrender.com/url",{redirectUrl:user_input}).then((res)=>
         {
             console.log(res.data)
             props.set_long_url(res.data)

@@ -17,7 +17,7 @@ function Second(props) {
     const countClick=(e)=>
     {
         e.preventDefault()
-        const url="http://localhost:3002/"+props.long_url+"/count";
+        const url="https://url-api.onrender.com/"+props.long_url+"/count";
         axios.get(url).then((res)=>
         {
             console.log(res.data)

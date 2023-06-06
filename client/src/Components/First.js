@@ -18,6 +18,7 @@ function First(props) {
         {
             console.log(res.data)
             props.set_long_url(res.data)
+            props.set_user_input(user_input)
             Navigate("/second")
         }).catch((err)=>
         {

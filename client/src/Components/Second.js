@@ -40,7 +40,7 @@ function Second(props) {
                     </div>
                 </div>
                 <div className="second">
-                    <span className='m-2'>Long URL: <Link to={props.base_url+props.long_url} target='_blank'>{props.base_url+props.long_url}</Link></span>
+                    <span className='m-2'>Long URL: <Link to={props.base_url+props.long_url} target='_blank'>{props.user_input}</Link></span>
                     <button className='btn btn-primary m-2 mt-3' onClick={countClick}>Total of clicks of your shortend URL</button>
                     <button className='btn btn-primary m-2' style={{width:"80%"}} onClick={change_page}>Shorten another URL </button>
                 </div>

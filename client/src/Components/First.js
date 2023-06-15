@@ -4,7 +4,7 @@ import Spinner from './Spinner'
 import {Link,useNavigate} from "react-router-dom"
 function First(props) {
     const [user_input,set_input]=useState("")
-    cont [flag,setFlag]=useState(false)
+    const [flag,setFlag]=useState(false)
     const Navigate=useNavigate()
     const handleChange=(e)=>
     {

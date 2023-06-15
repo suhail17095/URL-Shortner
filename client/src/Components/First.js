@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import axios from "axios"
+import Spinner from './Spinner'
 import {Link,useNavigate} from "react-router-dom"
 function First(props) {
     const [user_input,set_input]=useState("")
+    cont [flag,setFlag]=useState(false)
     const Navigate=useNavigate()
     const handleChange=(e)=>
     {
@@ -14,11 +16,13 @@ function First(props) {
     const submit=(e)=>
     {
         e.preventDefault();
+        setFlag(true)
         axios.post("https://url-api.onrender.com/url",{redirectUrl:user_input}).then((res)=>
         {
             console.log(res.data)
             props.set_long_url(res.data)
             props.set_user_input(user_input)
+            setFlag(false)
             Navigate("/second")
         }).catch((err)=>
         {
@@ -30,7 +34,7 @@ function First(props) {
     return (
         
         <div className="first">
-
+            {flag && <Spinner/>}
         <h1 style={{color:"#0087DA"}} className='font-weight-bold'>Short URL</h1>
         <div className="container shadow-lg">
             <h1 style={{color:"#505050",textAlign:"center"}}>Paste the URL to be shortend</h1>
